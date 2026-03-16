@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     holesky: {
       url: "https://ethereum-holesky-rpc.publicnode.com",
-      accounts: [process.env.WALLET_KEY],
+      accounts: process.env.WALLET_KEY ? [process.env.WALLET_KEY] : [],
     }
   }
 };
